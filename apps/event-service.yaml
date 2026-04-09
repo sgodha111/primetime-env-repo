@@ -5,16 +5,13 @@ metadata:
   namespace: argocd
 spec:
   project: default
-
   source:
-    repoURL: https://github.com/sgodha111/primetime-service-template.git
+    repoURL: https://github.com/sgodha111/event-service
     targetRevision: main
-    path: k8s
-
+    path: .
   destination:
     server: https://kubernetes.default.svc
     namespace: default
-
   syncPolicy:
     automated:
       prune: true
